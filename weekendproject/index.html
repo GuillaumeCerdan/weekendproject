@@ -1,0 +1,158 @@
+<!doctype html>
+<html ng-app>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+    <!--Custom css-->
+    <link type="text/css" rel="stylesheet" href="css/home.css" />
+    <link type="text/css" rel="stylesheet" href="css/utils.css" />
+
+    <!--Optimisé pour mobiles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+    <div class="row">
+        <!--Left side : Côté user-->
+        <div class="col s2 custom-dark height-100-p center-align pdg-top-20--force">
+
+            <img src="img/random_profile_pic.jpg" class="circle responsive-img" width="200" />
+            <p class="white-text fs20 mrg-top-5">
+                {{prenom}} {{nom}}
+            </p>
+
+            <!--Icônes réseaux sociaux-->
+            <div class="col s10 offset-s1">
+                <div class="col s4">
+                    <img src="img/reddit.png" class="responsive-img pointer" />
+                </div>
+                <div class="col s4">
+                    <img src="img/twitter.png" class="responsive-img pointer" />
+                </div>
+                <div class="col s4">
+                    <img src="img/github.png" class="responsive-img pointer" />
+                </div>
+            </div>
+
+            <div class="col s10 offset-s1 mrg-top-15 all-ease4">
+                <p class="white-text truncate click-truncate bck-white-1 pdg-10--force">
+                    Passionné de photographie depuis 25 ans, j'aime le sport, les jeux-vidéos ainsi que le marathon
+                    synchronisé en haute altitude !
+                </p>
+            </div>
+            <div class="col s10 offset-s1">
+                <p id="age" class="white-text">35 ans</p>
+            </div>
+
+        </div>
+
+        <!--Right side : Côté slider-->
+        <div class="col s10 height-100-p bck-img pdg-top-45--force">
+            <div class="col s12">
+                <div class="col s8 offset-s2">
+                    <ul class="tabs">
+                        <li class="tab col s4"><a class="active" href="#info">Informations personnelles</a></li>
+                        <li class="tab col s4"><a href="#reseaux">Réseaux sociaux</a></li>
+                        <li class="tab col s4"><a href="#para">Paramètres</a></li>
+                    </ul>
+                    <div id="info" class="col s12 white">
+                        <form class="col s12 pdg-top-45--force">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input value="Jean" id="prenom" ng-model="prenom" ng-init="prenom='Jean'" type="text"
+                                        class="validate">
+                                    <label for="prenom">Prenom</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input value="Alain" id="nom" ng-model="nom" ng-init="nom='Alain'" type="text"
+                                        class="validate">
+                                    <label for="nom">Nom de famille</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Afficher publiquement l'âge</span>
+                                </label>
+                            </div>
+                            <!-- <div class="row">
+                                <div class="input-field col s12">
+                                    <input disabled value="I am not editable" id="disabled" type="text" class="validate">
+                                    <label for="disabled">Disabled</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="password" type="password" class="validate">
+                                    <label for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" type="email" class="validate">
+                                    <label for="email">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12">
+                                    This is an inline input field:
+                                    <div class="input-field inline">
+                                        <input id="email_inline" type="email" class="validate">
+                                        <label for="email_inline">Email</label>
+                                        <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                                    </div>
+                                </div>
+                            </div> -->
+                        </form>
+                    </div>
+                    <div id="reseaux" class="col s12 white pdg-bottom-15--force">
+
+                        <!-- No link -->
+                        <div class="col s10 offset-s1 grey lighten-3 mrg-top-15 mrg-bottom-15" id="no-link">
+                            <p class="center-align">Vous n'avez lié aucun réseau social</p>
+                        </div>
+                        <!-- Separator -->
+                        <div class="sep-grey-1px col s8 offset-s2"></div>
+
+
+                        <div class="col s10 offset-s1 center-align">
+                            <div class="col s4 hoverable pointer pdg-top-10--force">
+                                <img src="img/reddit-orange.png" class="responsive-img circle w-100px"/>
+                                <a class="waves-effect waves-light btn modal-trigger reddit-bck-color mrg-bottom-15 mrg-top-15" href="#reddit-link">Lier votre compte Reddit</a>
+                            </div>
+                            <div class="col s4 hoverable pointer pdg-top-10--force">
+                                <img src="img/twitter-blue.png" class="responsive-img circle w-100px"/>
+                                <a class="waves-effect waves-light btn modal-trigger twitter-bck-color mrg-bottom-15 mrg-top-15" href="#twitter-link">Lier votre compte Twitter</a>
+                            </div>
+                            <div class="col s4 hoverable pointer pdg-top-10--force">
+                                <img src="img/github-black.png" class="responsive-img circle w-100px"/>
+                                <a class="waves-effect waves-light btn modal-trigger github-bck-color mrg-bottom-15 mrg-top-15" href="#github-link">Lier votre compte Github</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="para" class="col s12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

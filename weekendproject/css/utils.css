@@ -1,0 +1,62 @@
+/* Margins */
+.mrg-top-5 {
+    margin-top: 5px;
+}
+.mrg-top-15 {
+    margin-top: 15px;
+}
+.mrg-bottom-15 {
+    margin-bottom: 15px;
+}
+
+/* Paddings */
+.pdg-bottom-15--force {
+    padding-bottom: 15px !important;
+}
+
+/* Transitions */
+.all-ease4 {
+    transition: all ease .4s;
+}
+
+
+
+
+
+
+.w-100px {
+    width: 100px;
+}
+
+/* Utilises la force Luke */
+.pdg-10--force {
+    padding: 10px;
+}
+.pdg-top-10--force {
+    padding-top: 10px !important;
+}
+.pdg-top-20--force {
+    padding-top: 20px !important;
+}
+.pdg-top-45--force {
+    padding-top: 45px !important;
+}
+
+
+
+.sep-grey-1px {
+    height: 1px !important;
+    background-color: lightslategrey !important;
+    margin-bottom: 15px;
+}
+
+
+.height-100-p {
+    height: 100vh;
+}
+.pointer {
+    cursor: pointer;
+}
+.fs20 {
+    font-size: 20px;
+}

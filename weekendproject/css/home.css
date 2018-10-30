@@ -1,0 +1,18 @@
+.bck-img {
+    background-image: url('../img/bck.jpg');
+}
+.custom-dark {
+    background-color: #0E1717;
+}
+.bck-white-1 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.reddit-bck-color {
+    background-color: #FF4500 !important;
+}
+.twitter-bck-color {
+    background-color: #1DA1F2 !important;
+}
+.github-bck-color {
+    background-color: #24292E !important;
+}
